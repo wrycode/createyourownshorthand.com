@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM2MJWFCDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JM2MJWFCDW');
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta charset="utf-8"/>
+    <script src="/js/wasm_exec.js"></script>
+    <script>
+      const go = new Go();
+      WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+	  go.run(result.instance);
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="/fonts.css" />
+    
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="#">Create Your Own Shorthand</a>
+      <details class="toc">
+	<summary>Table of Contents
+	</summary>
+	<div class="my-toc">
+	  {{ .Page.TableOfContents }}
+	</div>
+      </details>
+
+      <a href="#shorthand_tool">Shorthand Preview Tool</a>
+      <a href="#survey">Survey</a>
+    </div>
+
+    <div id="main-content" class="main-content">
+      <h1 id="funTitle">Create Your Own Shorthand!</h1>
+      <hr>
+      <div id="guide">
+	{{ .Content }}
+      </div>
+
+
+      <div id="shorthand_tool">
+	<h1>Shorthand Preview Tool</h1>	
+	<div class="form-container" id="form-container">
+	  <div class="left_form">
+	    Use your own shorthand SVG file:<br><br>
+	    <input type="file" id="Custom_script_svg_value"accept=".svg"style="font-size:1em;">
+	    <br>
+	    <label id='customScriptLabel' for="Custom_script_svg_value"></label>
+	    <br>
+	    
+	    Or test a built-in shorthand:
+	    <select id="Builtin_script_name" name="builtinScript">
+	      <option value="grafoni.svg">Grafoni (variant, WIP)</option>	      	      
+	      <option value="teen_script.svg">Teen Script</option>
+	      <option value="demotic.svg">Demotic (incomplete)</option>
+	    </select>
+
+	    <input type="checkbox" id="Debug" name="Debug">
+	    <label for="Debug">Debug mode</label>
+	    <input type="checkbox" id="Draw_bounding_boxes" name="Draw_bounding_boxes">
+	    <label for="Draw_bounding_boxes">Draw bounding boxes</label>
+	    <br>
+	    <br>
+	    Form stroke width:  <input type="number" step="0.05" id="Form_stroke_width" name="Form_stroke_width" value="0.35">
+	    Language:  <select id="Language_code" name="Language_code">
+	      <option value="en_US">English (US)</option>
+	    </select>
+	    Adjust Image Width: <br>
+	    <input type="range" id="range_image_width_input" value="800" min="25" max="4000"  oninput="updateNumber(this.value)" style="vertical-align: middle;">
+	    <input type="number" id="number_image_width_input" value="800" min="25" max="4000" oninput="updateSlider(this.value)" >
+	    <br>
+	    Space between words: <input type="number" id="Space_between_metaforms" name="Space_between_metaforms" value="5">
+	    Space between lines:  <input type="number" id="Space_between_lines" name="Space_between_lines" value="10">
+	    Margin:  <input type="number" id="Margin" name="Margin" value="5">
+	    
+	  </div>
+	  <div class="right_form">
+	    Input Text:
+	    <textarea id="Input_text" name="Input_text">Let's start a
+	      new paragraph.
+
+	      A real bagel has a ratio of inside dough to outside crust that is completely obliterated by those giant toroids now sold as bagels just about every place, including the U.S. ground zero of bagels, New York City. The right size bagel has about half the amount of inside dough as is found in those giant things and that dough is offset by the crisp outside, which gives texture that plays off against the dough.  Too much dough and what you’ve got is a mushy wad with no interest and less taste. Good luck finding this small gem anyplace in the U.S. although sometimes they are sold as “mini-bagels” ; the only place where the right size is standard are Montreal (!) and London (!!), but even there only in some bakeries. As with size, a real bagel has a texture that can be produced only by initial boiling. Anything else– no matter how delicious — is a toroid shaped roll. If you put a delicious tomato sauce and the world’s greatest mozzarella cheese on an English muffin, you may have a delicious thing to eat but you don’t have pizza. Likewise, a non-boiled roll is not a bagel. To call a boiled bagel “traditional” is accurate but dismissive; call it traditional and REAL. That’s accurate and correct.</textarea><br>
+
+	    <button id="renderButton">Render</button>
+	    <button id="defaultsButton">Restore Rendering Defaults</button>
+	  </div>
+	</div>
+	<div id="output">
+	  <textarea id="log" name="log"readonly></textarea>
+	  <br>
+	  <canvas id="canvas"></canvas>
+	</div>
+
+      </div>
+      <h1>Survey</h1>
+      <div id="survey" class="survey">
+	<form id="survey_form">
+	  This website is a prototype. Please help me prioritize feature development by filling out this survey. 
+	  <br>
+	  <h2>If you could have any one of the following features, which would you choose?</h2>
+	  <ul>
+	    <li>
+              <input type="radio" id="option1" name="feature_choice" value="multiple pages">
+              <label for="option1">The ability to render multiple pages</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option2" name="feature_choice" value="variable_stroke_width">
+              <label for="option2">Support for variable stroke width</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option3" name="feature_choice" value="more_builtin_shorthand_systems">
+              <label for="option3">More built-in shorthand systems to test, like Gregg, Handywrite, and Noory Simplex</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option4" name="feature_choice" value="communicate_status">
+              <label for="option4">Clearly display when the tool is rendering and when the tool crashes so you can reload the page</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option5" name="feature_choice" value="improve_guide_text">
+              <label for="option5">Improve the guide at the top of this page.</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option6" name="feature_choice" value="improve_language_support">
+              <label for="option6">Make this resource easier to use for speakers of languages other than English.</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option7" name="feature_choice" value="shorthand_validation">
+              <label for="option7">Validate your SVG file, for instance, making sure you didn't include multiple forms for a single phoneme.'.</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option8" name="feature_choice" value="slant_option">
+              <label for="option8">Add the option to modify the 'slant' of otherwise vertical forms.</label>
+	    </li>
+	    <li>
+              <input type="radio" id="option9" name="feature_choice" value="better_loops">
+              <label for="option9">Better support for loops and circles.</label>
+	    </li>
+
+	    
+	    <li>
+              <input type="radio" id="option0" name="feature_choice" value="something else">
+              <label for="option0">Something else:</label>
+              <textarea id="new_features" name="new_features" rows="4" cols="50"></textarea>
+	    </li>
+	  </ul>
+	  <h2>Do you have any other questions or feedback?</h2>
+	  <textarea id="questions_or_feedback" name="questions_or_feedback" rows="4" cols="50"></textarea>
+	  <input id="surveyButton" type="submit" value="Submit">
+	</form>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/js/survey.js"></script>
+  <script src="/js/script_tool.js"></script>
+</html>

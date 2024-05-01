@@ -1,0 +1,308 @@
+---
+title: "create your own shorthand"
+type: "page"
+---
+# {{< my-toc >}}
+
+# * Vetting
+# ** Do I have something to say?
+# Shorthand is a practical way to write quickly and beautifully, and anyone can create their own shorthand using a simple formula.
+# ** What makes what I have to say different?
+# I have not heard of any well-known published material with this message. Usually they aim to teach a specific shorthand system. So the entire message is unique.
+# ** Who is the audience?
+# - Primary audience: Journalists, policemen, students, or anyone who wants to write by hand but can't write fast enough
+# - Early adapters: Shorthand or Conlang enthusiasts, possibly stationary and journaling enthusiasts (e.g. bullet journal communities)
+* If you would like to write by hand, but cannot write fast enough, you should learn shorthand
+
+*Writing by hand has unique benefits*. It signals attentiveness,  frees you from onscreen distractions, produces a tangible output as a record of your work, may enhance cognition, it is beautiful and somewhat novel, and it is fun.
+
+*There is one problem: it is slow. This website will show you how you can write fast*. Set aside the voice-to-text, the word processor, and the generative AI tools for a minute, and dig in. 
+
+** Shorthand is a way of writing by hand with beauty and efficiency
+
+*In shorthand, words are just a few strokes that flow like cursive*.
+
+#+CAPTION: Grafoni Shorthand
+[[file:grafoni_sample.jpeg]]
+
+Shorthand has thousands of years of history. It was used by Julius Caesar and Cicero. More recently, shorthands like Gregg and Pittman shorthand were used for court proceedings and reporting. Across America in the 1900's, high school students were taught Gregg shorthand.
+
+*Writing in shorthand is fast*. In competitions, professional stenographers could write 200+ WPM (Words Per Minute). For reference, English is spoken at about 150 WPM. Professional typists usually transcribe at 80 WPM or slower.
+
+With shorthand, 150 WPM (for parity with spoken English) is attainable with practice. 100 WPM (faster than typing) is possible with less practice.
+
+#+CAPTION: Gregg shorthand
+[[file:gregg_sample.png]]
+
+** Shorthand is practical and easy to learn
+Eventually the [[https://en.wikipedia.org/wiki/Stenotype][stenotype]] and other automation replaced shorthand in courts and offices. But shorthand is still a practical and rewarding skill with an [[https://old.reddit.com/r/FastWriting/][active community]].
+
+*Writing faster than you can type brings a whole different feeling, joy, and presence to your work*. With shorthand, you can transcribe brainstorming sessions, take notes quickly,  draw effortless diagrams, and write outside the margins. It is a deeply satisfying way to write and can help you achieve your goals by making the experience better for you.
+
+*You can learn shorthand quickly*. You do not need to learn a new language (in fact, you can easily create a shorthand system that works with multiple spoken languages). It is more like learning a different way to spell. I estimate you can be 'fluent' in a shorthand system in one month of focused study.
+
+** Shorthand uses phonetic spelling and abbreviations to easily compress language
+
+*Written languages are inefficient*.
+
+#+begin_quote
+The present, illogical, misleading orthography of the English Language is an impediment to progress and a burden upon our race. English spelling is a bewildering chaos of irregularities. Silent letters abound, and sign and sound do not correspond. Written words do not indicate their pronunciation -- they contradict speech, stifle reason and waste our time in mastering their arbitrary spelling and writing their superfluous letters.
+
+-Iven Hitlofi, 1907
+#+end_quote
+
+There are two simple ways to compress spelling: phonetics, and abbreviation.
+
+Spelling with a *phonetic alphabet* removes unspoken letters, which is slightly more efficient and increases clarity.
+
+#+CAPTION: Phonetic Compression
+| Original | IPA    |
+|----------+--------|
+| Ought    | =ɔt=   |
+| Wreath   | =riθ=  |
+| Receipt  | =rɪsit=  |
+| Walk     | =wɔk=  |
+| Thumb    | =θʌm=  |
+| Debt     | =dɛt=  |
+| Two      | =tu=   |
+
+*Abbreviation* turns common sequences of letters into one letter. You can abbreviate a phrase, a whole word, or just part of a word.
+
+The top 100 most common words make up around 50% of all English text. The top ten make up around 25%. 
+
+#+CAPTION: Top words and their frequency in the Corpus of Contemporary American English
+| Word |     Freq |
+|------+----------|
+| the  | 50074257 |
+| to   | 25557793 |
+| and  | 24821791 |
+| of   | 23605964 |
+| a    | 21889251 |
+| in   | 16560377 |
+| i    | 14722307 |
+| that | 13441314 |
+| you  | 12060967 |
+| it   | 11111285 |
+
+
+*Abbreviation and Phonetics greatly reduce the number of letters required to represent a text*. This is a starting point, but Latin letters are slow to write. We can improve by changing how we represent each letter.
+
+** Shorthand represents each letter as a simple stroke for fluid, fast writing
+
+Latin letters require multiple strokes, but shorthand systems use a single fluid movement for each sound or abbreviation:
+#+CAPTION: 
+[[file:new_modern_alphabet.jpeg]]
+
+Furthermore, in shorthand, you connect one letter to the next directly, without taking your pen off the page.
+
+
+#+CAPTION: Taquigrafía nacional-México, 1910
+[[Taquigrafía-nacional-México.png]]
+
+You now have seen the basic building blocks of every major shorthand system. With this knowledge, you are free to go check out the [[#headline-21][Resources]] and learn one. I recommend choosing one that is simple and does not diverge too much from phonetics
+
+Still reading? Perhaps you are up for a bit of a challenge. I will show you that it is easy to design and perfect your own shorthand system by following a few simple steps. I have even created a (FREE forever) tool that you can use to quickly preview changes to your system. Read on to learn about the three design steps for creating a shorthand
+
+* Anyone can create their own shorthand by following these steps:
+
+** 1. Create a Genesis Diagram for your shorthand forms
+In shorthand, letters are also called /forms/.
+
+The Genesis Diagram is a blueprint for all of the forms in your shorthand, drawn together in one page.
+
+A common strategy is to create one or more glyphs from which you will derive the forms in your shorthand. For instance, in Gregg shorthand, the /ellipse/ is the base shape of the system.
+
+#+CAPTION: Noory Simplex genesis glyph
+[[file:noory_simplex_genesis_glyph.png]]
+
+You are going to be choosing shapes for the forms that make up your shorthand, so it is a good idea to get out a pen and paper and start experimenting. You need to consider the following:
+
+- legibility (forms must be easily distinguishable)
+- direction (if you have too many forms that are drawn backwards, your words will start to look like scribbles)
+- beauty
+- /flow/ and writing speed
+
+
+#+CAPTION: Hardinge shorthand alphabet with genesis glyph
+[[file:hardinge_genesis.png]]
+
+Take some time writing the forms. Practice combining forms to see if they look good together.
+
+Consider the height of the forms. Avoid having too many tall forms, which can be hard to fit on a single line.
+
+# You can actually go the other way, like demotic shorthand, which cleverly draws forms that begin and end on the same line. Show example. so it always fits on the same lined paper as a latin alphabet, it ends up being quite compressed.
+
+** 2. Assign forms to sounds and abbreviations
+
+You should now have a set a beautiful forms that you can combine to write words. Now it is time to assign /meaning/ to your forms by creating an *alphabet*.
+
+#+CAPTION: Noory Simplex alphabet
+[[file:noory_simplex_alphabet.png]]
+
+Sounds that are perceived as distinct and indivisible in your language are called [[https://en.wikipedia.org/wiki/Phoneme][phonemes]].  Start by assigning one form to each phoneme in your language. I recommend borrowing a list of phonemes for your language from an existing shorthand system. For instance, if you speak English, [[http://www.alysion.org/handy/handywrite.htm][Handywrite]] is a great place to start.
+
+Make sure the phonemes make sense to YOU. For instance, only some
+accents of English distinguish between 'w' and 'hw' as in "what".
+
+{{< hank >}}
+
+Some other things to consider:
+- Some sounds are very common. Make sure to assign a form you /love/ to these sounds
+- Look for form combinations are beautiful, easy to write, and do not take up too much space
+- Consider making vowels and consonants look different
+- Add arrows to the alphabet page to keep track of the direction you draw the forms.
+
+Now we will move on to abbreviations. A lot of sounds frequently occur together. You should start with some basic abbreviations. For instance, "tion" as in "nation" can probably just be written "sh n".
+
+Like we already covered, the most common words make up a major portion of all written text. It is your job to represent those words with symbols that are quick to write, legible, and look good to you. Abbreviations that represent a single word (like /can/) or a phrase (like /thank you/) are called *logograms*.
+
+# If the abbreviation just represents a phoneme combination it is just a simple abbreviation.
+
+For each abbreviation, you can choose to "double-dip" or use a fresh symbol. For example, the symbol for =k=, when written alone, could represent the word 'can', because =k= written alone has no other meaning. 
+
+# . Outside of SMS messages, =k= written alone has no other meaning. 
+
+# I "double-dip" most of my phonetic forms so when written alone, the form represents a word. 
+
+I recommend drawing out a table to do this step. You should have a column for the form shape, the phonetic meaning, if any, and the logogram, if any.
+
+#+CAPTION: Prefix abbreviations in Graphonography (1894)
+[[file:graphonography_prefixes.png]]
+
+** 3. Test your shorthand and optimize
+
+At this point, the only thing left to do is /use/ your shorthand. You need to see what works and what does not work. You are not going to get it right on the first try, so do not try to fully memorize the first version of your script.
+
+I recommend choosing a group of forms, perhaps a few consonants and vowels, and doing the following:
+- practice writing forms individually, practice writing all the forms quickly
+- make a list of sounds, select a random sound, say it out loud, and then write the form for it
+- create a list of words using the sounds from the forms you are learning. Select them at random and say them out loud and write them
+
+Rinse and repeat with a different group until you are ready to work with all of your forms.
+
+You can use graph paper or handwriting paper if you need to check your proportions.
+
+After a little bit, try writing some of the normal writing you would already be doing. Watch a youtube video or TV show, and pause after each sentence to write it down. Write words that are fun to write and take note of them.
+
+#+CAPTION: The Declaration of Independence in Demotic shorthand
+[[file:demotic_sample.png]]
+
+
+*You will start to notice issues with your system*. Maybe one of the forms is used too much, or one of the form combonations is hard to write. Maybe the script is hard to space. Maybe you just want a different 'feel' for the script - whatever it is, go back to your Genesis Diagram and alphabet, and make some changes. 
+
+If you have gotten this far, you are well on your way to perfecting your shorthand. You should have a high quality system after two or three passes.
+
+However, if you want to speed up the feedback loop between making changes to your shorthand design and viewing the output, this webpage includes a free tool to do that.
+
+
+* You can use the tool on this webpage to develop and preview your own shorthand system
+
+Click [[#shorthand_tool][here]] to go to the tool.
+
+Right now it is just a prototype, so there are bugs and limitations. It renders a square of "handwritten" shorthand. If the tool seems unresponsive when you click 'Render' (for more than a few seconds), you might have to reload the web page. If you have more feedback about this tool or guide, please make sure to fill out the [[#survey][Survey]]. 
+
+** You can render arbitrary text in any supported shorthand
+
+Fill in any text in the yellow input box. You can also select a different language - 25 languages are supported, but I have not tested this too much because I do not have a multilingual shorthand. The language is used to convert the input text to IPA.
+
+*** Click 'Render' to write the input text in the chosen shorthand
+
+You might have to scroll down to view the image.
+[[file:screenshots/tool_1.png]]
+
+*** Check 'Debug mode' to view the words and subforms that make up each word
+
+[[file:screenshots/tool_2_debug.png]]
+
+This will show how the words are being broken down into IPA or logograms. It will print the debugging information below each word in the following format:
+
+#+begin_src
+<original word or phrase> (The word or phrase broken down into forms)
+#+end_src
+
+So for the word Bagel, you get =bagel (b·eɪ·ɡ·ə·ɫ)=, indicating that the 5 forms b, eɪ, ɡ, ə, and ɫ are being connected to form a word.
+
+'Debug mode' also prints some extra information to the small output text box directly below the input form.
+** Create your own shorthand SVG file using the free program [[https://inkscape.org/][Inkscape]]
+# If you are ready to use this tool, download the free program [[https://inkscape.org/][Inkscape]] on Linux, macOS, or Windows, and create a new file.
+
+*** Start by creating a /path/ for each form
+
+Draw your Forms as paths in Inkscape. At the bare minimum, you will
+need these three tools:
+
+- [[https://inkscape-manuals.readthedocs.io/en/latest/selector-tool.html][the Selector tool]], to move around the document and to select, move, and resize forms
+- [[https://inkscape-manuals.readthedocs.io/en/latest/pen-tool.html][the Pen tool]], to create the forms, and 
+- [[https://inkscape-manuals.readthedocs.io/en/latest/editing-paths.html][the Node tool]], to edit the forms
+
+This timelapse video shows the initial creation of a script using Grafoni's alphabet as a guide:
+
+{{< fast >}}
+
+
+*** Then add labels for forms which represent /sounds/
+Now you need to assign each /sound/ to /one form/.
+
+To describe the /sounds/ in your language, you need to use the International Phonetic Alphabet (IPA), which we mentioned earlier.  *Note that multiple IPA letters are required for some phonemes*. Again, you do not need to actually learn IPA - you can just use a tool like toPhonetics to get the phoneme you are looking for.
+
+To assign a form to a phoneme in Inkscape, select the form and open the Object Properties window with Object > Object Properties (or Ctrl+Shift+O). Then set the Label using the following format:
+
+#+begin_example
+IPA=X
+#+end_example
+
+where X is a sequence of one or more IPA letters that represent your phoneme.
+
+Here is what it looks like for the =ŋ= ("ng", as in /writing/) phoneme:
+
+[[file:ipa_label_1.png]]
+
+Be sure to click "Set" or the label will be lost when you click away from that form.
+
+*To assign multiple sounds to one form, separate the sounds with commas*.
+Here is an example, with =ŋ= again, where I want to add a default vowel
+attachment =ɪ= ("ee" as in /freedom/) to the "ng" sound:
+
+[[file:ipa_label_multiple_sounds.png]]
+
+* Step 3: Add Abbreviations
+
+To create /phonetic/ abbreviations with the IPA keyword, simply write the sequence of IPA characters that your form abbreviates.
+
+For words and phrases, you can use the /logogram/ feature, which uses your native language instead of IPA. Instead of the IPA keyword, use the following format:
+
+#+begin_example
+logo=X
+#+end_example
+
+Where X is any word or phrase in your language. Do not include punctuation in your phrases.
+
+*A form can have multiple meanings, but a meaning should not be assigned to multiple forms.* 
+
+For instance, the form for 'k' (as in /catch/) when written alone could mean the word /can/.
+To define both a logogram and an IPA meaning for a form, separate them with an '&' (ampersand):
+
+[[file:logo_and_ipa.png]]
+
+
+# I recommend looking up the most commonly used words (lemmas) in your language. You can find some free lists online with a quick search. Here are some common words in English: /can, get, are, well, of, have, not, my, to, do, about, be, he, was, which, just, you, with, this, a/
+
+#    Save your Inkscape file as an SVG. Now you can use it at 
+#    the [[#][top]] of the page and render arbitrary text 
+#    using your shorthand system.
+
+** FAQ
+
+*** Where is the source code? Can I contribute?
+Absolutely, contributions are welcome. The code is [[https://github.com/wrycode/createyourownshorthand.com][here]]. Remember, this is just a prototype, so be kind 😅.
+
+*** Can I add a shorthand to the list of built-in shorthands?
+Yes! The demo shorthands are just quick examples I made while I was making the rendering tool. I would love to have better demo files. You can download the current files [[https://github.com/wrycode/createyourownshorthand.com/tree/main/scripts][here]] as examples.
+
+** Additional Resources
+
+- [[https://old.reddit.com/r/FastWriting/][FastWriting subreddit]] (best shorthand subreddit)
+- [[https://old.reddit.com/r/shorthand/][shorthand subreddit]] (check out the sidebar)
+- [[http://www.alysion.org/handy/handywrite.htm][Handywrite]] (Simple system and great resource for beginners to learn about phonetic shorthand)
+- https://www.stenophile.com/shorthand
+- https://www.omniglot.com/writing/shorthand.htm

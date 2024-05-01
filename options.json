@@ -1,0 +1,13 @@
+{
+    "Debug": false,
+    "Draw_bounding_boxes": false,
+    "Form_stroke_width": 0.2,
+    "Custom_script_svg_value":  "",
+    "Builtin_script_name": "grafoni.svg",
+    "Language_code": "en_US",
+    "Image_width": 500,
+    "Input_text": "Hello. This is some random text.",
+    "Space_between_metaforms": 10,
+    "Space_between_lines": 15,
+    "Margin": 15
+}

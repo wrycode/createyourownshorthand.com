@@ -1,0 +1,6 @@
+public/*
+static/main.wasm
+.hugo_build.lock
+node_modules
+static/assets
+rendered_text.png

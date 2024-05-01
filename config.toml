@@ -1,0 +1,26 @@
+baseurl = "https://createyourownshorthand.com"
+title = "Create Your Own Shorthand"
+author = "Nick Econopouly"
+languagecode = "en"
+disableHugoGeneratorInject = true # remove generator meta tag in the HTML head on the home page
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = false
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "tango"
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 1
+    ordered = true
+    endLevel = 4
+
+[mediaTypes]
+  [mediaTypes.'application/wasm']
+    suffixes = ['wasm']
