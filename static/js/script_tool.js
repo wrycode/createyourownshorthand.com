@@ -115,7 +115,6 @@ document.getElementById('Custom_script_svg_value').addEventListener('change', fu
       reader.readAsText(file); // For SVGs or other text-based files
     document.getElementById('Builtin_script_name').disabled = true;
     document.getElementById('customScriptLabel').style.fontWeight = 'bold';
-    document.getElementById('customScriptLabel').style.fontSize = '1em';
     document.getElementById('customScriptLabel').style.color = '#007bff';
     document.getElementById('customScriptLabel').textContent = 'Custom shorthand selected: '+  file.name;
       document.getElementById('Custom_script_svg_value').textContent = "change file"

@@ -1,3 +1,29 @@
+html {
+    font-size: 26px;
+    width: 100%;
+}
+body {
+    color: #262626;
+    margin-top: 0;
+    background: #ffe0e0;
+    font-weight: 300;
+    width: 100%;
+    min-width: 0px;
+    margin: 0;
+    font-family: "EB Garamond";
+    box-sizing: border-box;
+}
+h2 {
+    font-weight: 200;
+    font-size: 1.8em;
+}
+table {
+    margin: auto;
+}
+h3 {
+    font-weight: 200;
+    font-size: 1.4em;
+}
 .form-container {
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -7,7 +33,6 @@
     font-family: Arial, sans-serif;
     border-radius: 8px;
 }
-
 .left_form, .right_form {
     flex-basis: 48%;
     padding: 10px;
@@ -16,27 +41,18 @@
     position: fixed;
     padding: 20px;
     background-color: #ffd4d4;
-    
-    /* width: 5em; */
     font-size: .8em;
     height: 100%;
-    /* background: #111; */
-    /* padding: 20px; */
     overflow: auto;
 }
-
 .main-content {
-    /* margin-left: 5em; */
     padding: 20px;
 }
-
 .sidebar a {
     display: block;
-    /* color: white; */
     text-decoration: none;
     margin-bottom: 10px;
 }
-
 .sidebar a:hover {
     color: #f1f1f1;
 }
@@ -62,7 +78,6 @@
     height: 100px;
     resize: none;
 }
-
 textarea {
     width: 100%;
     padding: 8px;
@@ -76,37 +91,19 @@ textarea {
 }
 #funTitle {
     text-align: center;
-    /* text-shadow: 2px 2px #8B4513; */
     font-size: 70px;
     font-weight: 300;
-    /* text-decoration: underline;     */
     margin-bottom: 10px;
     margin-top: 10px;
-}
-
-/* .guide { */
-/*   /\* display: flex; *\/ */
-/*   /\* justify-content: center; *\/ */
-/*   /\* align-items: center; *\/ */
-/*   /\* height: 100%; /\\* Specify the height as you wish *\\/ *\/ */
-/* } */
-
-/* #guide img { */
-/*   max-width: 100%; */
-/*   height: auto; */
-/*     display: block; */
-/*     margin-left: auto; */
-/*     margin-right: auto; */
-/* } */
-video::-webkit-media-controls-panel {
-   display: flex !important;
-   opacity: 1 !important;
 }
 video {
     margin: auto;
     display: block;
 }
 @media only screen and (min-width: 950px) {
+    input, select {
+	font-size: 1em;
+    }
     .main-content {
 	width: 950px;
 	position: center;
@@ -119,7 +116,6 @@ video {
     }
 
 }
-
 @media only screen and (max-width: 48em) {
     .form-container {
 	flex-direction: column;
@@ -129,24 +125,16 @@ video {
     }
     .sidebar {
 	visibility: collapse;
+	display: none;
     }
 }
-
-@media print{
+@media print {
     .sidebar {
 	visibility: collapse;
     }
-    
-	/* #header { */
-	/* 	display: none !important;  */
-	/* } */
-	/* .html_header_left #main { */
-        /* margin-left: 0px !important;  */
-	/* } */
 }
 .form-container input[type="number"],
 .form-container select {
-    /* display: block; */
     width: 100%;
     padding: 5px;
     margin-top: 5px;
@@ -156,7 +144,6 @@ video {
 .form-container select {
     margin-bottom: 20px;
 }
-
 #surveyButton, button {
     width: auto;
     padding: 10px 20px;
@@ -164,7 +151,6 @@ video {
     border-radius: 4px;
     cursor: pointer;
 }
-
 #canvas {
     align: center;
 }
@@ -175,7 +161,6 @@ video {
     background-color: #007bff;
     color: white;
 }
-
 #defaultsButton {
     background-color: #8B4513; /* Dark Brown */
     color: white;
@@ -185,74 +170,8 @@ video {
     background-color: #A0522D; /* Slightly lighter brown */
 }
 /* From personal site ========================================================= */
-
-html {
-    font-size: 26px;
-}
-body {
-    color: #262626;
-    margin-top: 0;
-    background: #ffe0e0;
-    font-weight: 300;
-    min-width: 0px;
-    margin: 0;
-    font-family: "EB Garamond";
-    box-sizing: border-box;
-}
-h1 {
-    /* font-weight: 250; */
-    /* font-siz */
-}
-h2 {
-    font-weight: 200;
-    font-size: 1.8em;
-}
-
-table {
-    margin: auto;
-}
-h3 {
-    font-weight: 200;
-    font-size: 1.4em;
-}
-.menu {
-    font-family: "Open Sans", sans-serif;
-}
-.menu a:visited {
-    color: blue;
-}
 strong {
     font-weight: 600;
-}
-.menu ul {
-    margin: 0;
-    padding: 0;
-    padding-right: 15px;
-    list-style-type: none;
-}
-.menu li {
-    display: block;
-    padding-right: 10px;
-    padding-bottom: 0px;
-    float: left;
-}
-.footer {
-    padding-bottom: 10px;
-}
-.footer .menu li.footer-only {
-    display: block;
-    float: right;
-}
-.menu li.footer-only {
-    display: none;
-}
-
-#pagelist {
-    line-height: 150%;
-    width: 100%;
-}
-#pagelist a:visited {
-    color: blue;
 }
 code {
     font-family: "Source Code Pro";
@@ -282,7 +201,7 @@ img {
 figcaption {
     text-align: center;
     font-size: .8em;
-  padding-top: 8px;    
+    padding-top: 8px;    
 }
 .title {
     font-family: "Open Sans", sans-serif;
@@ -305,24 +224,7 @@ figcaption {
 
 .hr {
     border-left: 0px;
-
 }
-.date {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-}
-
-.ldnotice {
-    background-color: #ffd4d4;
-    border-radius: 5px;
-    font-size: .7em;
-}
-.dynamic-tr td{
-    background-color: #ffd4d4;
-    border-radius: 5px;
-}
-
-
 details {
     font-size: .8em;
 }
@@ -331,44 +233,11 @@ details[open] {
     padding: 10px;
     border-radius: 5px;
 }
-
 summary {
     background-color: #ffd4d4;
     padding: 10px;
     border-radius: 5px;
 }
-
-
-/* copy code from code blocks, see copy.js. Original post I copied this from:
-https://mansoorbarri.com/guides/copy-code/
-*/
-.highlight {
-    position: relative;
-}
-.highlight pre {
-    padding-right: 75px;
-}
-.highlight-copy-btn {
-    position: absolute;
-    top: 7px;
-    right: 7px;
-    border: 0;
-    border-radius: 4px;
-    padding: 1px;
-    font-size: 0.7em;
-    line-height: 1.8;
-    color: #fff;
-    background-color: #777;
-    min-width: 55px;
-    text-align: center;
-}
-.highlight-copy-btn:hover {
-    background-color: #666;
-}
-div.highlight.nocopy button.highlight-copy-btn {
-    display: none;
-}
-
 blockquote{
     font-size: .85em;
     width:70%;
@@ -383,14 +252,10 @@ blockquote{
     line-height:1.6;
     position: relative;
 }
-
-
-
 #survey ul {
     list-style-type: none;
     padding: 0;
 }
-
 #survey li {
     margin-bottom: 10px;
     background-color: #FF9393;
@@ -399,9 +264,7 @@ blockquote{
 }
 
 #survey   label {
-    /* display: flex; */
     width: 90%;
-    /* display: inline-block; */
 }
 #survey   li:hover {
     background-color: #FFC0C0;
@@ -409,21 +272,9 @@ blockquote{
 
 input[type="radio"] {
     margin: 10px;
-    /* display: inline-block; */
-    /* display: flex; */
 }
-
 label {
     font-size: 1em;
-}
-
-input, select {
-    font-size: 1em;
-}
-textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
 }
 #survey {
     font-family: Arial, sans-serif;

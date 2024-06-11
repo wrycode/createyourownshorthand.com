@@ -304,5 +304,5 @@ Yes! The demo shorthands are just quick examples I made while I was making the r
 - [[https://old.reddit.com/r/FastWriting/][FastWriting subreddit]] (best shorthand subreddit)
 - [[https://old.reddit.com/r/shorthand/][shorthand subreddit]] (check out the sidebar)
 - [[http://www.alysion.org/handy/handywrite.htm][Handywrite]] (Simple system and great resource for beginners to learn about phonetic shorthand)
-- https://www.stenophile.com/shorthand
-- https://www.omniglot.com/writing/shorthand.htm
+- [[https://www.stenophile.com/shorthand][Stenophile.com]]
+- [[https://www.omniglot.com/writing/shorthand.htm][Omniglot shorthand page]]
