@@ -1,4 +1,5 @@
-git clone --recurse-submodules <project-url>
+git clone --recurse-submodules --shallow-submodules https://github.com/wrycode/vtt.git
+
 git submodule update --init --recursive
 
 

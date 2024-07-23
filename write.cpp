@@ -22,7 +22,7 @@
 #include <unordered_map>
 
 // All keys used by this program, so we can enable them for the virtual keyboard
-const __u16 keys_used[] = { KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9, KEY_0, KEY_MINUS, KEY_EQUAL, KEY_BACKSPACE, KEY_TAB, KEY_Q, KEY_W, KEY_E, KEY_R, KEY_T, KEY_Y, KEY_U, KEY_I, KEY_O, KEY_P, KEY_LEFTBRACE, KEY_RIGHTBRACE, KEY_ENTER, KEY_LEFTCTRL, KEY_A, KEY_S, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J, KEY_K, KEY_L, KEY_SEMICOLON, KEY_APOSTROPHE, KEY_GRAVE, KEY_LEFTSHIFT, KEY_BACKSLASH, KEY_Z, KEY_X, KEY_C, KEY_V, KEY_B, KEY_N, KEY_M, KEY_COMMA, KEY_DOT, KEY_SLASH, KEY_RIGHTSHIFT, KEY_KPASTERISK, KEY_LEFTALT, KEY_SPACE, KEY_CAPSLOCK, KEY_F1, KEY_F2, KEY_F3, KEY_F4, KEY_F5, KEY_F6, KEY_F7, KEY_F8, KEY_F9, KEY_F10, KEY_NUMLOCK, KEY_SCROLLLOCK, KEY_K, KEY_K, KEY_K, KEY_KPMINUS, KEY_K, KEY_K, KEY_K, KEY_KPPLUS, KEY_K, KEY_K, KEY_K, KEY_K, KEY_KPDOT };
+constexpr __u16 keys_used[] = { KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9, KEY_0, KEY_MINUS, KEY_EQUAL, KEY_BACKSPACE, KEY_TAB, KEY_Q, KEY_W, KEY_E, KEY_R, KEY_T, KEY_Y, KEY_U, KEY_I, KEY_O, KEY_P, KEY_LEFTBRACE, KEY_RIGHTBRACE, KEY_ENTER, KEY_LEFTCTRL, KEY_A, KEY_S, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J, KEY_K, KEY_L, KEY_SEMICOLON, KEY_APOSTROPHE, KEY_GRAVE, KEY_LEFTSHIFT, KEY_BACKSLASH, KEY_Z, KEY_X, KEY_C, KEY_V, KEY_B, KEY_N, KEY_M, KEY_COMMA, KEY_DOT, KEY_SLASH, KEY_RIGHTSHIFT, KEY_KPASTERISK, KEY_LEFTALT, KEY_SPACE, KEY_CAPSLOCK, KEY_F1, KEY_F2, KEY_F3, KEY_F4, KEY_F5, KEY_F6, KEY_F7, KEY_F8, KEY_F9, KEY_F10, KEY_NUMLOCK, KEY_SCROLLLOCK, KEY_K, KEY_K, KEY_K, KEY_KPMINUS, KEY_K, KEY_K, KEY_K, KEY_KPPLUS, KEY_K, KEY_K, KEY_K, KEY_K, KEY_KPDOT };
 
 // TODO: finish ASCII mapping
 
@@ -41,6 +41,25 @@ const std::unordered_map<uint32_t, std::vector<int>> ascii_keys = {
   {'0', {KEY_0}},
 
   // symbols
+  {'\n', {KEY_ENTER}},
+  {';', {KEY_SEMICOLON}},
+  {'\'', {KEY_APOSTROPHE}},
+  {'`', {KEY_GRAVE}},
+  {'\\', {KEY_BACKSLASH}},
+  {',', {KEY_COMMA}},
+  {'.', {KEY_DOT}},
+  {'/', {KEY_SLASH}},
+  {'*', {KEY_KPASTERISK}},
+  {' ', {KEY_SPACE}},
+  {'-', {KEY_KPMINUS}},
+  {'/', {KEY_SLASH}},
+  {'/', {KEY_SLASH}},
+  {'/', {KEY_SLASH}},
+  {'/', {KEY_SLASH}},
+  {'/', {KEY_SLASH}},
+  {'/', {KEY_SLASH}},
+  {'/', {KEY_SLASH}},
+  {'!', {KEY_LEFTSHIFT, KEY_1}},
 
   // lowercase letters
   
@@ -72,9 +91,33 @@ const std::unordered_map<uint32_t, std::vector<int>> ascii_keys = {
   {'z', {KEY_Z}},
 
   // uppercase letters
+
+  {'A', {KEY_LEFTSHIFT, KEY_A}},
+  {'B', {KEY_LEFTSHIFT, KEY_B}},
+  {'C', {KEY_LEFTSHIFT, KEY_C}},
+  {'D', {KEY_LEFTSHIFT, KEY_D}},
+  {'E', {KEY_LEFTSHIFT, KEY_E}},
+  {'F', {KEY_LEFTSHIFT, KEY_F}},
+  {'G', {KEY_LEFTSHIFT, KEY_G}},
+  {'H', {KEY_LEFTSHIFT, KEY_H}},
+  {'I', {KEY_LEFTSHIFT, KEY_I}},
+  {'J', {KEY_LEFTSHIFT, KEY_J}},
+  {'K', {KEY_LEFTSHIFT, KEY_K}},
+  {'L', {KEY_LEFTSHIFT, KEY_L}},
+  {'M', {KEY_LEFTSHIFT, KEY_M}},
+  {'N', {KEY_LEFTSHIFT, KEY_N}},
+  {'O', {KEY_LEFTSHIFT, KEY_O}},
+  {'P', {KEY_LEFTSHIFT, KEY_P}},
   {'Q', {KEY_LEFTSHIFT, KEY_Q}},
   {'R', {KEY_LEFTSHIFT, KEY_R}},
+  {'S', {KEY_LEFTSHIFT, KEY_S}},
+  {'T', {KEY_LEFTSHIFT, KEY_T}},
+  {'U', {KEY_LEFTSHIFT, KEY_U}},
+  {'V', {KEY_LEFTSHIFT, KEY_V}},
   {'W', {KEY_LEFTSHIFT, KEY_W}},
+  {'X', {KEY_LEFTSHIFT, KEY_X}},
+  {'Y', {KEY_LEFTSHIFT, KEY_Y}},
+  {'Z', {KEY_LEFTSHIFT, KEY_Z}},
 };
 
 /* Send an event (key press/release, etc, defined in input-event-codes.h) to /dev/uinput
@@ -260,7 +303,7 @@ int main()
 
   // Represents one of potentially multiple UTF-8 strings that would be streamed from the Google API
   // std::u8string str = u8"Russian: Привет, мир! Это тестовый текст.(Hello, world! This is test text.)\nArabic: مرحبا بك في العالم! هذا نص تجريبي.";
-  std::u8string str = u8"Test Here. Now a Russian word: Привет"; // ASCII string
+  std::u8string str = u8"Test Here. Now a Russian word: Привет. Now, let's add some punctuation to our string!"; // ASCII string
   
   // Inefficient, but easy reason about. In the future, may use a
   // utf-8 aware library to iterate through str directly or convert to
