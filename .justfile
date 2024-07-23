@@ -5,6 +5,7 @@ build:
 run:
 	./write
 
-	# bear -- g++ -std=c++23 -Wall -Weffc++ -Werror -Wextra -Wconversion \
-	# -Wsign-conversion -pedantic-errors -ggdb write.cpp \
-	# -o write -Iextern/plog/include
+stream:
+	bear -- g++ -std=c++23 -Wall -Wextra -Wconversion \
+	-Wsign-conversion -ggdb stream.cpp \
+	-o stream -Iextern/plog/include `pkg-config --libs grpc`
