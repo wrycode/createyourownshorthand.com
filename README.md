@@ -1,6 +1,8 @@
 git clone --recurse-submodules --shallow-submodules https://github.com/wrycode/vtt.git
 
-sudo pacman -Sy abseil-cpp grpc curl nlohmann-json, probably a few more I forgot
+sudo pacman -Sy cmake abseil-cpp grpc curl nlohmann-json bear libevdev just
+
+, probably a few more I forgot
 
 AUR packages: google-crc32c
 

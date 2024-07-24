@@ -1,69 +1,48 @@
+#include "google/cloud/speech/v2/speech_client.h"
+#include "google/cloud/project.h"
 #include <iostream>
-#include <memory>
-#include <string>
 
-#include <grpcpp/grpcpp.h>
-#include "google/cloud/speech/v1/cloud_speech.grpc.pb.h"
-
-#include <cstdlib> // for getenv
-#include <string>
-
-
-using google::cloud::speech::v1::Speech;
-using google::cloud::speech::v1::RecognizeRequest;
-using google::cloud::speech::v1::RecognizeResponse;
-using grpc::Status;
-
-std::string getGoogleAppCredentialsJson() {
-  const char* googleAppCredentialJson = std::getenv("YOUR_GOOGLE_APPLICATION_CREDENTIALS_JSON");
-  if (googleAppCredentialJson) {
-    return std::string(googleAppCredentialJson);
-  } else {
-    return std::string("~/.config/gcloud/application_default_credentials.json");
-  }
+// Configure a simple recognizer for en-US.
+void ConfigureRecognizer(google::cloud::speech::v2::RecognizeRequest& request) {
+  *request.mutable_config()->add_language_codes() = "en-US";
+  request.mutable_config()->set_model("short");
+  *request.mutable_config()->mutable_auto_decoding_config() = {};
 }
 
-class SpeechClient {
- public:
-  SpeechClient(std::shared_ptr<grpc::Channel> channel)
-      : stub_(Speech::NewStub(channel)) {}
+int main(int argc, char* argv[]) try {
+  auto constexpr kDefaultUri = "gs://cloud-samples-data/speech/hello.wav";
+  if (argc != 3 && argc != 4) {
+    std::cerr << "Usage: " << argv[0] << " project <region>|global [gcs-uri]\n"
+              << "  Specify the region desired or \"global\"\n"
+              << "  The gcs-uri must be in gs://... format. It defaults to "
+              << kDefaultUri << "\n";
+    return 1;
+  }
+  std::string const project = argv[1];
+  std::string location = argv[2];
+  auto const uri = std::string{argc == 4 ? argv[3] : kDefaultUri};
+  namespace speech = ::google::cloud::speech_v2;
 
-  // Assembles the client's payload and sends it to the server.
-  void Recognize() {
-    RecognizeRequest request;
+  std::shared_ptr<speech::SpeechConnection> connection;
+  google::cloud::speech::v2::RecognizeRequest request;
+  ConfigureRecognizer(request);
+  request.set_uri(uri);
+  request.set_recognizer("projects/" + project + "/locations/" + location +
+                         "/recognizers/_");
 
-    // Fill the request object with the relevant data, e.g.:
-    // * Config parameters (encoding, sample rate, language, etc.)
-    // * Audio data
-
-    RecognizeResponse response;
-    grpc::ClientContext context;
-
-    Status status = stub_->Recognize(&context, request, &response);
-
-    if (status.ok()) {
-      // Handle the RecognizeResponse object.
-      std::cout << "Recognized speech successfully.\n";
-    } else {
-      std::cout << status.error_code() << ": " << status.error_message() << std::endl;
-    }
+  if (location == "global") {
+    // An empty location string indicates that the global endpoint of the
+    // service should be used.
+    location = "";
   }
 
- private:
-  std::unique_ptr<Speech::Stub> stub_;
-};
-
-int main() {
-  auto json_key = grpc::ServiceAccountJWTAccessCredentials(
-      getGoogleAppCredentialsJson(), std::chrono::hours(1).count() * 3600);
-
-  std::shared_ptr<grpc::ChannelCredentials> creds = grpc::SslCredentials(grpc::SslCredentialsOptions());
-  creds = grpc::CompositeChannelCredentials(creds, json_key);
-
-  auto channel = grpc::CreateChannel("speech.googleapis.com", creds);
-
-  SpeechClient client(channel);
-  client.Recognize();
+  auto client = speech::SpeechClient(speech::MakeSpeechConnection(location));
+  auto response = client.Recognize(request);
+  // if (!response) throw std::move(response).status();
+  // std::cout << response->DebugString() << "\n";
 
   return 0;
+} catch (google::cloud::Status const& status) {
+  std::cerr << "google::cloud::Status thrown: " << status << "\n";
+  return 1;
 }
