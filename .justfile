@@ -8,4 +8,6 @@ run:
 stream:
 	bear -- g++ -std=c++23 -Wall -Wextra -Wconversion \
 	-Wsign-conversion -ggdb stream.cpp \
-	-o stream -Iextern/plog/include `pkg-config --libs grpc`
+	-o stream -Iextern/plog/include  \
+	-lgrpc++ -lprotoc -lprotobuf `pkg-config --libs grpc` -lgrpc \
+	-Iextern/include
