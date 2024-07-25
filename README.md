@@ -6,23 +6,21 @@ sudo pacman -Sy cmake abseil-cpp grpc curl nlohmann-json bear libevdev just
 
 AUR packages: google-crc32c
 
-git submodule update --init --recursive
 
+# For stream.cpp
 cd extern/google-cloud-cpp
 cmake -S . -B cmake-out \
 -DBUILD_TESTING=OFF \
 -DGOOGLE_CLOUD_CPP_ENABLE_EXAMPLES=OFF \
 -DGOOGLE_CLOUD_CPP_ENABLE=speech \
--DCMAKE_INSTALL_PREFIX=../
-
+-DCMAKE_INSTALL_PREFIX=./
 cmake --build cmake-out -- -j "$(nproc)"
 cmake --build cmake-out --target install
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
 
 
-
-
+# For write.cpp
 sudo vim /etc/udev/rules.d/uinput.rules:
 KERNEL=="uinput", GROUP="vtt", MODE="0660"
 sudo udevadm control --reload-rules && sudo udevadm trigger
