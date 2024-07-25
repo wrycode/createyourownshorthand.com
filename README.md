@@ -1,34 +1,20 @@
-git clone --recurse-submodules --shallow-submodules https://github.com/wrycode/vtt.git
+# Build instructions  * 
+1. git clone --recurse-submodules --shallow-submodules https://github.com/wrycode/vtt.git
 
-sudo pacman -Sy cmake abseil-cpp grpc curl nlohmann-json bear libevdev just
+2. Install development dependencies: CMake, GCC, [just](https://github.com/casey/just), probably a few more I've forgotten
 
-, probably a few more I forgot
+3. Install dependencies for the Cloud Speech-to-Text API C++ Client Library: https://github.com/googleapis/google-cloud-cpp/blob/main/doc/packaging.md#required-libraries
 
-AUR packages: google-crc32c
+For instance, for me, I ran: `sudo pacman -Sy cmake abseil-cpp grpc curl nlohmann-json just`, plus installed  [google-crc32c](https://aur.archlinux.org/packages/google-crc32c) from the AUR
 
-
-# For stream.cpp
-cd extern/google-cloud-cpp
-cmake -S . -B cmake-out \
--DBUILD_TESTING=OFF \
--DGOOGLE_CLOUD_CPP_ENABLE_EXAMPLES=OFF \
--DGOOGLE_CLOUD_CPP_ENABLE=speech \
--DCMAKE_INSTALL_PREFIX=./
-cmake --build cmake-out -- -j "$(nproc)"
-cmake --build cmake-out --target install
-
-export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
+4. Commands to build and run different components are in flux and documented in [.justfile](.justfile)
 
 
-# For write.cpp
-sudo vim /etc/udev/rules.d/uinput.rules:
-KERNEL=="uinput", GROUP="vtt", MODE="0660"
-sudo udevadm control --reload-rules && sudo udevadm trigger
+# Enabling virtual keyboard
 
-vtt $ sudo groupadd vtt
-vtt $ sudo usermod -a -G vtt wrycode
+Keys are typed using the [uinput](https://kernel.org/doc/html/v4.12/input/uinput.html) kernel interface, exposed in /dev/uinput. The program needs to have permissions to write to /dev/uinput. The easiest way is to chmod /dev/uinput, but there is probably a smarter way with udev.
 
-sudo    setfacl -m g::rw /dev/uinput
 
-Or just give up:
-sudo chmod u+w /dev/uinput 
+# Unicode characters
+
+For languages other than English, you must have [IBus](https://wiki.archlinux.org/title/IBus). It may be enabled/installed already. You can test if it is installed by typing Ctrl+Shift+U (then release), then 2+7+0+5. You should see: ✅
