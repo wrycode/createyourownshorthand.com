@@ -1,4 +1,4 @@
-Free instruction manual and software tool for creating your own shorthand system. 
+[Archived] Free instruction manual and software tool for creating your own shorthand system.
 
 Most information can be found on the website itself, visit it
 [here](https://createyourownshorthand.com/). This README contains

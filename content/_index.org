@@ -199,7 +199,7 @@ However, if you want to speed up the feedback loop between making changes to you
 
 Click [[#shorthand_tool][here]] to go to the tool.
 
-Right now it is just a prototype, so there are bugs and limitations. It renders a square of "handwritten" shorthand. If the tool seems unresponsive when you click 'Render' (for more than a few seconds), you might have to reload the web page. If you have more feedback about this tool or guide, please make sure to fill out the [[#survey][Survey]]. 
+Right now it is just a prototype, so there are bugs and limitations. It renders a square of "handwritten" shorthand. If the tool seems unresponsive when you click 'Render' (for more than a few seconds), you might have to reload the web page.
 
 ** You can render arbitrary text in any supported shorthand
 
@@ -294,7 +294,7 @@ To define both a logogram and an IPA meaning for a form, separate them with an '
 ** FAQ
 
 *** Where is the source code? Can I contribute?
-Absolutely, contributions are welcome. The code is [[https://github.com/wrycode/createyourownshorthand.com][here]]. Remember, this is just a prototype, so be kind 😅.
+I do not plan to continue working on this project, but the code is [[https://github.com/wrycode/createyourownshorthand.com][here]], feel free to browse and steal!
 
 *** Can I add a shorthand to the list of built-in shorthands?
 Yes! The demo shorthands are just quick examples I made while I was making the rendering tool. I would love to have better demo files. You can download the current files [[https://github.com/wrycode/createyourownshorthand.com/tree/main/scripts][here]] as examples.

@@ -40,6 +40,17 @@
     </div>
 
     <div id="main-content" class="main-content">
+      <div class="alert-box">
+  <p class="alert-text">NOTE: This was a fun side project, but it will not receive any updates. The application will continue to work as long as I can afford to host it!</p>
+</div>
+<style>
+  .alert-box {
+    background-color: #ff9800;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+</style>
       <h1 id="funTitle">Create Your Own Shorthand!</h1>
       <hr>
       <div id="guide">
@@ -101,64 +112,6 @@
 	</div>
 
       </div>
-      <h1>Survey</h1>
-      <div id="survey" class="survey">
-	<form id="survey_form">
-	  This website is a prototype. Please help me prioritize feature development by filling out this survey. 
-	  <br>
-	  <h2>If you could have any one of the following features, which would you choose?</h2>
-	  <ul>
-	    <li>
-              <input type="radio" id="option1" name="feature_choice" value="multiple pages">
-              <label for="option1">The ability to render multiple pages</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option2" name="feature_choice" value="variable_stroke_width">
-              <label for="option2">Support for variable stroke width</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option3" name="feature_choice" value="more_builtin_shorthand_systems">
-              <label for="option3">More built-in shorthand systems to test, like Gregg, Handywrite, and Noory Simplex</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option4" name="feature_choice" value="communicate_status">
-              <label for="option4">Clearly display when the tool is rendering and when the tool crashes so you can reload the page</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option5" name="feature_choice" value="improve_guide_text">
-              <label for="option5">Improve the guide at the top of this page.</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option6" name="feature_choice" value="improve_language_support">
-              <label for="option6">Make this resource easier to use for speakers of languages other than English.</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option7" name="feature_choice" value="shorthand_validation">
-              <label for="option7">Validate your SVG file, for instance, making sure you didn't include multiple forms for a single phoneme.'.</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option8" name="feature_choice" value="slant_option">
-              <label for="option8">Add the option to modify the 'slant' of otherwise vertical forms.</label>
-	    </li>
-	    <li>
-              <input type="radio" id="option9" name="feature_choice" value="better_loops">
-              <label for="option9">Better support for loops and circles.</label>
-	    </li>
-
-	    
-	    <li>
-              <input type="radio" id="option0" name="feature_choice" value="something else">
-              <label for="option0">Something else:</label>
-              <textarea id="new_features" name="new_features" rows="4" cols="50"></textarea>
-	    </li>
-	  </ul>
-	  <h2>Do you have any other questions or feedback?</h2>
-	  <textarea id="questions_or_feedback" name="questions_or_feedback" rows="4" cols="50"></textarea>
-	  <input id="surveyButton" type="submit" value="Submit">
-	</form>
-      </div>
-    </div>
   </body>
-  <script type="module" src="/js/survey.js"></script>
   <script src="/js/script_tool.js"></script>
 </html>
