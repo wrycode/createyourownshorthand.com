@@ -41,7 +41,7 @@ func LoadIPADict(lang string, log *log.Logger) (map[string]string, error) {
 	type IPAJson map[string][]map[string]string
 	var jsonDict IPAJson
 
-	resp, err := http.Get(fmt.Sprintf("https://storage.googleapis.com/ipa_dicts/%s.json", lang))
+	resp, err := http.Get(fmt.Sprintf("https://f005.backblazeb2.com/file/ipa-dict/%s.json", lang))
 	if err != nil {
 		log.Println("Error downloading IPA dictionary: ", err)
 	}
